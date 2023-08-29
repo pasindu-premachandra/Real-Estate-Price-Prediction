@@ -19,5 +19,5 @@ This project is a great way to learn about the data science process and how to b
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/pasindu-premachandra/Real-Estate-Price-Prediction/assets/54570205/5eecce62-d065-4bb8-b781-8f62a030d5f7)
 
