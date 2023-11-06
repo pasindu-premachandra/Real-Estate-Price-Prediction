@@ -26,13 +26,14 @@ function onClickedEstimatePrice() {
   var location = document.getElementById("uiLocations");
   var estPrice = document.getElementById("uiEstimatedPrice");
 
-  var url = "http://127.0.0.1:5000/predict_home_price";
-
   // Format the price above to USD using the locale, style, and currency.
     let LKR = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'LKR',
     });
+
+  var url = "http://127.0.0.1:5000/predict_home_price";
+  // var url = "/api/predict_home_price";
 
   $.post(url, {
       house_size: parseFloat(sqft.value),
@@ -41,7 +42,7 @@ function onClickedEstimatePrice() {
       location: " "+location.value.replace(",", ", ")
   },function(data, status) {
       console.log(data.estimated_price);
-      estPrice.innerHTML = "<h2>" + LKR.format(data.estimated_price);
+      estPrice.innerHTML = "<h2>" + LKR.format(data.estimated_price) + "</h2>";
       console.log(status);
   });
 }
@@ -49,6 +50,7 @@ function onClickedEstimatePrice() {
 function onPageLoad() {
   console.log( "document loaded" );
   var url = "http://127.0.0.1:5000/get_location_names";
+  // var url = "/api/get_location_names";
   $.get(url,function(data, status) {
       console.log("got response for get_location_names request");
       if(data) {

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sri Lanka Home Price Prediction</title>
+    <title>Real Estate Price Predictor</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="app.js"></script>
 	<link rel="stylesheet" href="app.css">
 </head>
 <body>
+ <div class="stylish-title">Sri Lanka Real Estate Price Predictor</div>
 <div class="img"></div>
 <form class="form">
 	<h2>Area (Square Feet)</h2>
@@ -43,11 +44,12 @@
 	<div>
   <select class="location" name="" id="uiLocations">
     <option value="" disabled="disabled" selected="selected">Choose a Location</option>
-		<option>Electronic City</option>
-        <option>Rajaji Nagar</option>
+		<option>Matara City, Matara</option>
+        <option>Malabe, Colombo</option>
   </select>
 </div>
 	<button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
 	<div id="uiEstimatedPrice" class="result">	<h2></h2> </div>
+	</form>
 </body>
 </html>
